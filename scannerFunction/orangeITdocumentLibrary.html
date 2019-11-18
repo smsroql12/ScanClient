@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    html 
+    { 
+        background: url('background.svg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    body
+    {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #header {
+        width: 700px;
+        margin: 0 auto;
+        display: table;
+    }
+    #header img {
+        width: 300px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    #header label {
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        font-size: 35pt;
+    }
+    #box
+    {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        left: 50%;
+        top: 50%;
+        margin-left: -350px;
+        margin-top: -350px;
+        border: #000 solid 1px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: #eee;
+        text-align:center;
+    }
+    .inbox {
+        background: green;
+        height: 330px;
+        width: 330px;
+        margin: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .inbox label {
+        float: left;
+        text-align: left;
+        font-size: 25pt;
+        padding: 10px 10px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .docName {
+        cursor: pointer;
+    }
+    .punctuality {
+        background: #1ea1e6 url('punctuality.png');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .expenditure {
+        background: #8ec21f url('expenditure.png');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <h1><div id="header"><img src="logo.png"/><label>통합문서자료실</label></div></h1>
+    <div id="box">
+        <div class="inbox punctuality">
+            <label class="docName">근태처리원 양식<br/>다운로드</label>
+        </div>
+        <div class="inbox expenditure">
+            <label class="docName">지출결의서 양식<br/>다운로드</label>
+        </div>
+        <div class="inbox">
+            
+        </div>
+        <div class="inbox">
+            
+        </div>
+    </div>
+    <script>
+        document.getElementsByClassName('inbox')[0]
+        .addEventListener('click', function (event) {
+            window.location.assign('근태처리원_양식.xlsx');
+        });
+
+        document.getElementsByClassName('inbox')[1]
+        .addEventListener('click', function (event) {
+            window.location.assign('지출결의서_양식.xlsx');
+        });
+    </script>
+</body>
+</html>
