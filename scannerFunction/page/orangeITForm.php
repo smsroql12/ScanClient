@@ -1,5 +1,10 @@
 <?php 
     include "dbconfig.php"; 
+    header('Content-Type: text/html; charset=UTF-8');
+    mysqli_query("set session character_set_connection=utf8;");
+    mysqli_query("set session character_set_results=utf8;");
+    mysqli_query("set session character_set_client=utf8;");
+    date_default_timezone_set("Asia/Seoul");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -42,6 +47,14 @@
         font-size: 15pt;
     }
     #top a:hover {
+        color: rgb(45, 11, 238);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    #modify {
+        color: rgb(45, 11, 238);
+    }
+    #modify:hover {
         color: rgb(45, 11, 238);
         text-decoration: underline;
         cursor: pointer;
@@ -128,9 +141,9 @@
         <?php 
             if(isset($_SESSION['userid'])) {
         ?>
-        <label><?php echo $_SESSION['userid']; ?> 관리자 로그인중</label>
-        <a href="modifyFile.php">파일 수정</a>
-        <a href="logOut.php" style="margin-left: 10px;">로그아웃</a>
+        <label>관리자 로그인중</label>
+        <a id="modify" onclick='PopupCenter("modifyFile.php","modifyFile","300","310");' style="margin-left: 10px;">파일 수정</a>
+        <a href="logOut.php" style="margin-left: 15px;">로그아웃</a>
         <?php
             }
             else {
@@ -168,13 +181,13 @@
 
         document.getElementsByClassName('inbox')[0]
         .addEventListener('click', function (event) {
-            window.location.assign('근태처리원_양식.xlsx');
+            window.location.assign('uploads/근태처리원_양식.xlsx');
         });
 
 
         document.getElementsByClassName('inbox')[1]
         .addEventListener('click', function (event) {
-            window.location.assign('지출결의서_양식.xlsx');
+            window.location.assign('uploads/지출결의서_양식.xlsx');
         });
 
         
@@ -191,13 +204,13 @@
             ) {
                 var con_test = confirm("크롬 브라우저의 경우 .csv 확장자가 .xls 로 변환되어\r다운로드 되는 버그가 존재합니다.\r익스플로러, 엣지 등 다른 브라우저를 사용 해 주세요.\r그래도 내려 받으시겠습니까?");
                 if(con_test == true){
-                    window.location.assign('OrangeIT_연락처.csv');
+                    window.location.assign('uploads/OrangeIT_연락처.csv');
                 }
                 else if(con_test == false){
                     return;
                 }
             } else { 
-                window.location.assign('OrangeIT_연락처.csv');
+                window.location.assign('uploads/OrangeIT_연락처.csv');
             }
         });
 
