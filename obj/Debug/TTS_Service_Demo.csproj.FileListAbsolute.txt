@@ -1,0 +1,12 @@
+D:\Source File\C#\TTS_Service_Demo\bin\Debug\TTS_Service_Demo.exe.config
+D:\Source File\C#\TTS_Service_Demo\bin\Debug\TTS_Service_Demo.exe
+D:\Source File\C#\TTS_Service_Demo\bin\Debug\TTS_Service_Demo.pdb
+D:\Source File\C#\TTS_Service_Demo\bin\Debug\Microsoft.Speech.dll
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.csprojAssemblyReference.cache
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.Form1.resources
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.Properties.Resources.resources
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.csproj.GenerateResource.cache
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.csproj.CoreCompileInputs.cache
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.csproj.CopyComplete
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.exe
+D:\Source File\C#\TTS_Service_Demo\obj\Debug\TTS_Service_Demo.pdb
